@@ -13,4 +13,5 @@ where replace the my-react-app with your frontend folder name, here 'frontend'
 3. Use react-typescript as the language.
 
 4.``` cd frontend```
+
 5. ```npm i``` or ```npm install``` to download all the dependencies.
