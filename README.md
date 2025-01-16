@@ -15,3 +15,5 @@ where replace the my-react-app with your frontend folder name, here 'frontend'
 4.``` cd frontend```
 
 5. ```npm i``` or ```npm install``` to download all the dependencies.
+6. ```npm run dev``` to run it, it will redirect you to vite+React page.
+7. 
