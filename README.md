@@ -16,5 +16,5 @@ where replace the my-react-app with your frontend folder name, here 'frontend'
 6. ```npm run dev``` to run it, it will redirect you to vite+React page.
 
 
-We will be using fragments instead of div, bcz we often need to group multiple elements together. Normally, we woould use a div or another HTML tag to do this. BUt adding extra tags like <div> can sometimes mess up with our layout or styles because it adds unnecessary HTML elements to our page.
+We will be using fragments instead of div, bcz we often need to group multiple elements together. Normally, we woould use a div or another HTML tag to do this. BUt adding extra tags like div can sometimes mess up with our layout or styles because it adds unnecessary HTML elements to our page.
 
