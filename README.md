@@ -18,3 +18,10 @@ where replace the my-react-app with your frontend folder name, here 'frontend'
 
 We will be using fragments instead of div, bcz we often need to group multiple elements together. Normally, we woould use a div or another HTML tag to do this. BUt adding extra tags like div can sometimes mess up with our layout or styles because it adds unnecessary HTML elements to our page.
 
+# How to make folders in backend
+
+```npm init -y ``` in the backend folder, to get the package. json file.
+then install express and mongoose by
+```npm install express mongoose``` .
+
+now go to package.json file and change ```"start": "node server.js" ``` to ```"start": "nodemon server.js"```.
