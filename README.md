@@ -68,5 +68,10 @@ in the server.js file you'll get the output as server is ready,
 3. make a cluster in it.
 4. create a .env file and write the connection string in it, and replace the <password> placeholder with ur password.
 5. Then, go to network access and change the setting of IP adress to be accessed by anywhere.
+6. ```console.log(process.env.MONGO_URI);``` write this in server.js, you'll get an undefined error in console.
+7. for that use
+```
+import dotenv from "dotenv";
+dotenv.config(); ``` 
 
 
