@@ -143,19 +143,19 @@ export default Product;
 2. This will be your new server.js, you have to specify which error and all will come when we use mongo
    ```
    import express from "express";
-import dotenv from "dotenv";
-import { connectDB } from './config/db.js';
-import Product from './models/product.js';
-
-dotenv.config();
-
-const app=express();
-
-app.post("/products",async(req,res)=>{
-    //defines a route that listens for post requests at the /products endpoint
-    const product=req.body;
-    //req.body is the data sent by the client in the request body (As JSON)
-    //eg.{ name: "Laptop", price: 1500, image: "laptop.jpg" }
+    import dotenv from "dotenv";
+    import { connectDB } from './config/db.js';
+    import Product from './models/product.js';
+    
+    dotenv.config();
+    
+    const app=express();
+    
+    app.post("/products",async(req,res)=>{
+        //defines a route that listens for post requests at the /products endpoint
+        const product=req.body;
+        //req.body is the data sent by the client in the request body (As JSON)
+        //eg.{ name: "Laptop", price: 1500, image: "laptop.jpg" }
 
     if(!product.name || !product.price || !product.image){
         return res.status(400).json({success:false, message:"Please provide all fields"});
