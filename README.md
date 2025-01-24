@@ -62,7 +62,7 @@ app.get("/",(req,res)=>{
 ```
 in the server.js file you'll get the output as server is ready,
 
-##MongoDB
+## MongoDB
 1. Go to mongodb's website, and login
 2. make a project
 3. make a cluster in it.
