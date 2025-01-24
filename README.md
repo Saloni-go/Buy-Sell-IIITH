@@ -130,4 +130,9 @@ const Product= mongoose.model('Product', productSchema);
 
 export default Product;
 ```
- 
+15. change the get place in server.js to products from root like this:
+    ```
+    app.get("/products",(req,res)=>{
+    res.send("Server is r123eady");}) ```
+
+## API
