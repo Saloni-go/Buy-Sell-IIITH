@@ -195,5 +195,23 @@ export default Product;
     "image":"example.com/image"}```
 9. Add the following line in server.js so that our API support has a middleware
    ``` app.use(express.json()); //allows us to accept json data in the body seciton on postman's website.```
-10. 
-
+10. Download the postman desktop agent and extract the files.
+11. There would be a postman agent file run it. WHen you run it, it will show a postman blue icon in taskbar showing that the postman is running on ur computer and low your local host can be connected to it. you should get 200 status here.
+12. Now referesh mongoDB, and you will see your input collection data there.
+    We will get object_ID which mongoDB creates by deafult, all the three categories we specifiec above, and created AT and updated AT as we wrote in the code.
+    eg.
+    ```
+    _id 6793a56eef6abf30ba4548a9
+    name
+    "smart watch"
+    price
+    199.99
+    image
+    "example.com/image"
+    createdAt
+    2025-01-24T14:36:30.138+00:00
+    updatedAt
+    2025-01-24T14:36:30.138+00:00
+    __v
+    0```
+14. 
