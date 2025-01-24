@@ -55,9 +55,11 @@ above is the code for reference on where to add the type line.
 remove the test line from above bcz its getting printed a lot of time, and instead add ```    "dev":"nodemon server.js",``` so that now for running the code you can just do ```npm run dev```.
 
 then put 
-```app.get("/",(req,res)=>{
+```
+app.get("/",(req,res)=>{
     res.send("Server is ready");
-})```
+})
+```
 in the server.js file you'll get the output as server is ready,
 
 ##MongoDB
