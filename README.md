@@ -54,4 +54,17 @@ here, ```{
 above is the code for reference on where to add the type line. 
 remove the test line from above bcz its getting printed a lot of time, and instead add ```    "dev":"nodemon server.js",``` so that now for running the code you can just do ```npm run dev```.
 
+then put 
+```app.get("/",(req,res)=>{
+    res.send("Server is ready");
+})```
+in the server.js file you'll get the output as server is ready,
+
+##MongoDB
+1. Go to mongodb's website, and login
+2. make a project
+3. make a cluster in it.
+4. create a .env file and write the connection string in it, and replace the <password> placeholder with ur password.
+5. Then, go to network access and change the setting of IP adress to be accessed by anywhere.
+
 
