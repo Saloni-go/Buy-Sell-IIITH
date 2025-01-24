@@ -183,5 +183,17 @@ export default Product;
     
     
     // xhIyHErQDTcWsMQi password for mongodb ```
-3. 
+3. Login into postman.
+4. create a new worskspace, for yourself.
+5. Then create a new collection and in that collection create a new request CREATE PRODUCT
+6. change the method to post and the link address as what we are specifying locally in our code i.e. ```http://localhost:5000/products```
+7. Under body section on website, under RAW choose JSON.
+8. and write this on website right now for checking purposes
+   ``` {
+    "name":"smart watch",
+    "price":"199.99",
+    "image":"example.com/image"}```
+9. Add the following line in server.js so that our API support has a middleware
+   ``` app.use(express.json()); //allows us to accept json data in the body seciton on postman's website.```
+10. 
 
