@@ -74,6 +74,7 @@ in the server.js file you'll get the output as server is ready,
 import dotenv from "dotenv";
 dotenv.config();
 ```
+You will get output as your mongo_URI connection string in the terminal as well. 
 8. Then make a config folder in backend and create a db.js file
 9. write the following code in db.js
 ```
