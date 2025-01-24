@@ -100,5 +100,34 @@ export const connectDB=async()=>{
     connectDB() //function which is specified in db.js file
     console.log("Server started at http://localhost:5000");});
     ```
-12.  
+12.  Run the code, you should get mongoDB connected in your terminal.
 
+13.  Create models folder in backend , and in this folder make a product.js file.
+14.  write the following code in this file:
+``` import mongoose from "mongoose";
+
+const productSchema=new mongoose.Schema({
+    name:{
+        type:String,
+        required: true
+    },
+    price:{
+        type:Number,
+        required: true 
+    },
+    image:{
+        type:String,
+        required: true
+    },
+},{
+    timestamps: true //createdAT, UpdatedAT
+}
+);
+
+const Product= mongoose.model('Product', productSchema);
+//mongoose will automatically make it lowercase and plural i.e. products. Hence, we will use product so that it makes it products, if we will use products it will make it productss.
+//product will be the name of collection mongoose will make, or automatically connect to if one like this already exist.
+
+export default Product;
+```
+ 
