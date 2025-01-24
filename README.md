@@ -135,4 +135,53 @@ export default Product;
     app.get("/products",(req,res)=>{
     res.send("Server is r123eady");}) ```
 
+  
+
 ## API
+
+1. The await keyword you will use afterwards can only be used if you use async in the main function. So keep that in mind.
+2. This will be your new server.js, you have to specify which error and all will come when we use mongo
+   ```
+   import express from "express";
+import dotenv from "dotenv";
+import { connectDB } from './config/db.js';
+import Product from './models/product.js';
+
+dotenv.config();
+
+const app=express();
+
+app.post("/products",async(req,res)=>{
+    //defines a route that listens for post requests at the /products endpoint
+    const product=req.body;
+    //req.body is the data sent by the client in the request body (As JSON)
+    //eg.{ name: "Laptop", price: 1500, image: "laptop.jpg" }
+
+    if(!product.name || !product.price || !product.image){
+        return res.status(400).json({success:false, message:"Please provide all fields"});
+    }
+
+    const newProduct=new Product(product) //product from above, were we requested client's input into it
+    //this we will put into database now
+
+    try{
+        await newProduct.save();
+        // saves newly created product document to the database.
+        res.status(201).json({success: true, data: newProduct});
+        // data: new product means it Sends the saved product (including its _id assigned by MongoDB) back to the client as confirmation.
+
+    }
+    catch{
+        console.error("Error in create product: ", error.message);
+        res.status(500).json({success:false, message:"Server error"});
+    }}); 
+    // console.log(process.env.MONGO_URI);
+    app.listen(5000,()=>{
+        connectDB();//function which is specified in db.js file
+        console.log("Server started at http://localhost:5000");
+    });
+    
+    
+    // xhIyHErQDTcWsMQi password for mongodb ```
+3. 
+
