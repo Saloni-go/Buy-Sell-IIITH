@@ -72,6 +72,32 @@ in the server.js file you'll get the output as server is ready,
 7. for that use
 ```
 import dotenv from "dotenv";
-dotenv.config(); ``` 
+dotenv.config();
+```
+8. Then make a config folder in backend and create a db.js file
+9. write the following code in db.js
+```
+import mongoose from "mongoose";
 
+
+export const connectDB=async()=>{
+    try{
+        const conn=await mongoose.connect(process.env.MONGO_URI);
+        console.log('MongoDB connected: ${conn.conection.host}');
+    }catch(error){
+        console.error('Error: ${error.message}');
+        process.exit(1);
+    }
+}
+```
+10. after that we need to connect it to server.js, so add ```import { connectDB } from './config/db.js'; ```
+11. And add the line connectDB() in console.log() function like:
+    
+    ```
+    console.log(process.env.MONGO_URI);
+    app.listen(5000,()=>{
+    connectDB() //function which is specified in db.js file
+    console.log("Server started at http://localhost:5000");});
+    ```
+12.  
 
