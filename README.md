@@ -214,4 +214,6 @@ export default Product;
     2025-01-24T14:36:30.138+00:00
     __v
     0```
-14. 
+14.   NOW WE WILL be doing other things except for creating, i.e. deleting, updating, getting all, etc.
+15.   For updating you will have to go to headers and choose content-type: application/json and then put the updated value in body.
+16.   except for this following is the code for the same.
