@@ -169,7 +169,7 @@ export default Product;
         await newProduct.save();
         // saves newly created product document to the database.
         res.status(201).json({success: true, data: newProduct});
-        // data: new product means it Sends the saved product (including its _id assigned by MongoDB) back to the client as confirmation.
+        // data: new product means it Sends the saved product (including its _id assigned by MongoDB) bac to the client as confirmation.
 
     }
     catch{
